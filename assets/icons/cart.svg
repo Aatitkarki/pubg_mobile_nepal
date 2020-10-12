@@ -1,0 +1,10 @@
+<svg id="cart" xmlns="http://www.w3.org/2000/svg" width="29.47" height="25.28" viewBox="0 0 29.47 25.28">
+  <path id="Path_48" data-name="Path 48" d="M100.616,114.039a6.855,6.855,0,0,1-6.847-6.847c0-.178.014-.352.026-.527H85.869a.527.527,0,0,0-.517.624l1.58,8.427a.527.527,0,0,0,.517.43h14.467a2.633,2.633,0,0,0,2.613-2.307l.143-1.144A6.8,6.8,0,0,1,100.616,114.039Z" transform="translate(-76.939 -101.399)" fill="#ffc107"/>
+  <g id="Group_83" data-name="Group 83" transform="translate(0 2.107)">
+    <circle id="Ellipse_11" data-name="Ellipse 11" cx="2.633" cy="2.633" r="2.633" transform="translate(21.043 17.907)" fill="#455a64"/>
+    <circle id="Ellipse_12" data-name="Ellipse 12" cx="2.633" cy="2.633" r="2.633" transform="translate(7.891 17.907)" fill="#455a64"/>
+    <path id="Path_49" data-name="Path 49" d="M25.684,59.519H11.224a4.278,4.278,0,0,1-4.3-2.963L3.871,43.719H.626a.535.535,0,1,1,0-1.053H4.385A.61.61,0,0,1,5,43.087L8.154,56.349a3.056,3.056,0,0,0,3.071,2.117H25.684a.535.535,0,1,1,0,1.053Z" transform="translate(0 -42.666)" fill="#455a64"/>
+  </g>
+  <circle id="Ellipse_13" data-name="Ellipse 13" cx="5.793" cy="5.793" r="5.793" transform="translate(17.883 0)" fill="#4caf50"/>
+  <text id="UC" transform="translate(19.47 8.08)" fill="#fafafa" font-size="8" font-family="BahijSultanNahia, Bahij SultanNahia"><tspan x="0" y="0">UC</tspan></text>
+</svg>

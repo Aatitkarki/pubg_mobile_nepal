@@ -21,7 +21,7 @@ class LoginPage extends StatelessWidget {
               children: [
                 Icon(
                   Icons.arrow_back,
-                  color: kSecondaryIconColor,
+                  color: kPrimaryColor,
                 ),
                 Text(
                   "Login",
