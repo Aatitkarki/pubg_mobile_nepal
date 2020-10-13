@@ -23,7 +23,7 @@ ThemeData kLightTheme = ThemeData(
       bodyText1: TextStyle(
         fontSize: 18,
         fontWeight: FontWeight.w500,
-        color: Colors.black,
+        color: kPrimaryTextColor,
       ),
       // body norm - med
       bodyText2: TextStyle(
@@ -51,10 +51,15 @@ ThemeData kLightTheme = ThemeData(
         color: kTextWithBackgroundColor,
       )),
   scaffoldBackgroundColor: kBackgroundColor,
+  cursorColor: kPrimaryTextColor,
   inputDecorationTheme: InputDecorationTheme(
     border: OutlineInputBorder(
+      borderSide: BorderSide(color: kPrimaryTextColor),
+      borderRadius: BorderRadius.circular(8),
+    ),
+    focusedBorder: OutlineInputBorder(
       borderSide: BorderSide(color: kPrimaryColor),
-      borderRadius: BorderRadius.circular(4),
+      borderRadius: BorderRadius.circular(8),
     ),
     isDense: true,
     contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),

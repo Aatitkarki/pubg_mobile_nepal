@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pubg_mobile_nepal/common/ui/ui_helper.dart';
+import 'package:pubg_mobile_nepal/modules/features/home_screen/view/home_screen_page.dart';
 import 'package:pubg_mobile_nepal/theme/colors.dart';
 
 class LoginPage extends StatelessWidget {
@@ -19,12 +21,13 @@ class LoginPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Icon(
-                  Icons.arrow_back,
+                IconButton(
+                  icon: Icon(Icons.arrow_back),
                   color: kPrimaryColor,
+                  onPressed: () => Get.back(),
                 ),
                 Text(
-                  "Login",
+                  "LOGIN",
                   style: Theme.of(context).textTheme.headline5,
                 )
               ],
@@ -32,46 +35,37 @@ class LoginPage extends StatelessWidget {
             SizedBox(
               height: size.height * 0.2,
             ),
+            Text("EMAIL ADDRESS",
+                style: Theme.of(context).textTheme.headline5.copyWith(
+                      fontSize: 20,
+                    )),
+            TextField(),
             Text(
-              "Email address",
+              "PASSWORD",
               style: Theme.of(context).textTheme.headline5,
             ),
-            TextField(
-              decoration: InputDecoration(
-                  contentPadding: sPadding,
-                  border: OutlineInputBorder(
-                      borderSide: new BorderSide(color: Colors.black)),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: kSecondaryIconColor))),
-            ),
-            Text(
-              "Password",
-              style: Theme.of(context).textTheme.headline5,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                  contentPadding: sPadding,
-                  border: OutlineInputBorder(
-                      borderSide: new BorderSide(color: Colors.black)),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: kSecondaryIconColor))),
-            ),
+            TextField(),
             mHeightSpan,
-            Container(
-              height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(4)),
-              child: Center(
-                child: Text(
-                  "Login",
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyText1
-                      .copyWith(color: Colors.black),
+            InkWell(
+              onTap: () => Get.to(HomeScreen()),
+              child: Container(
+                width: Get.width,
+                padding: mYPadding,
+                decoration: BoxDecoration(
+                    color: kPrimaryColor,
+                    borderRadius: BorderRadius.circular(10)),
+                child: Center(
+                  child: Text(
+                    "LOGIN",
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyText1
+                        .copyWith(color: kBackgroundColor),
+                  ),
                 ),
               ),
             ),
+            sHeightSpan,
             Container(
               width: double.infinity,
               child: Text(
@@ -79,33 +73,9 @@ class LoginPage extends StatelessWidget {
                 textAlign: TextAlign.end,
                 style: Theme.of(context)
                     .textTheme
-                    .subtitle2
-                    .copyWith(color: kSecondaryIconColor),
+                    .caption
+                    .copyWith(color: kPrimaryColor, fontSize: 12),
               ),
-            ),
-            Text("This is data",
-                style: Theme.of(context)
-                    .textTheme
-                    .headline5
-                    .copyWith(color: Color(0xff373737))),
-            Text(
-              "this is the pubg mobile nepal application",
-              style: TextStyle(
-                  fontFamily: 'helveticaneue', fontWeight: FontWeight.normal),
-            ),
-            Text(
-              "this is the pubg mobile nepal application",
-              style: TextStyle(
-                  fontFamily: 'helveticaneue',
-                  fontWeight: FontWeight.normal,
-                  color: Color(0xff212121)),
-            ),
-            Text(
-              "this is the pubg mobile nepal application",
-              style: TextStyle(
-                  fontFamily: 'helveticaneue',
-                  fontWeight: FontWeight.normal,
-                  color: Color(0xff373737)),
             ),
           ],
         ),

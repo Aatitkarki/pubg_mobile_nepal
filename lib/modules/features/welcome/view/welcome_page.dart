@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pubg_mobile_nepal/common/ui/ui_helper.dart';
+import 'package:pubg_mobile_nepal/modules/features/login/view/login_page.dart';
 import 'package:pubg_mobile_nepal/theme/colors.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -44,10 +45,9 @@ class WelcomePage extends StatelessWidget {
             )),
             mHeightSpan,
             InkWell(
+              //TODO: Add spalsh to the inkwell
               onTap: () {
-                print("Login Button is tapped");
-                //TODO: add todo
-                //Get.to(page);
+                Get.to(LoginPage());
               },
               child: Container(
                   width: Get.width,

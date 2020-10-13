@@ -8,13 +8,12 @@ const Color kPrimaryTextColor = Color(0xff373737);
 const Color kSecondaryBackgroundColor = Color(0xfff8f8f8);
 
 const Color kSecondaryButtonColor = Color(0xffe74c3c);
-const Color kTerteryButtonColor = Color(0xffe74c3c);
 
 //Used at textfield with no input
 const Color kTextWithBackgroundColor = Color(0xfffafafa);
 
-const Color kPrimaryColorLight = Color(0xffF8F5F2);
-const Color kLightWhiteColor = Color(0xffE1E1E1);
-const Color kWhiteBackgroundColor = Color(0xffffffff);
-const Color kBlackBackgroundColor = Color(0xff000000);
-const Color kLightGreyColor = Color(0xffF2F5F8);
+// const Color kPrimaryColorLight = Color(0xffF8F5F2);
+// const Color kLightWhiteColor = Color(0xffE1E1E1);
+// const Color kWhiteBackgroundColor = Color(0xffffffff);
+// const Color kBlackBackgroundColor = Color(0xff000000);
+// const Color kLightGreyColor = Color(0xffF2F5F8);
