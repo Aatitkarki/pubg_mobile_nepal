@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pubg_mobile_nepal/common/ui/ui_helper.dart';
+import 'package:pubg_mobile_nepal/modules/features/dashboard/view/dashboard_page.dart';
 import 'package:pubg_mobile_nepal/modules/features/register_page/widget/info_text_widget.dart';
 import 'package:pubg_mobile_nepal/theme/colors.dart';
 
@@ -73,7 +74,7 @@ class RegisterPage extends StatelessWidget {
                 ),
                 child: RaisedButton(
                   color: kPrimaryColor,
-                  onPressed: () {},
+                  onPressed: () => Get.to(Dashboard()),
                   child: Text(
                     "CREATE ACCOUNT",
                     style: Theme.of(context)

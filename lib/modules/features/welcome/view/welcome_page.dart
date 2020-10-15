@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pubg_mobile_nepal/common/ui/ui_helper.dart';
+import 'package:pubg_mobile_nepal/modules/features/dashboard/view/dashboard_page.dart';
 import 'package:pubg_mobile_nepal/modules/features/login/view/login_page.dart';
 import 'package:pubg_mobile_nepal/modules/features/register_page/view/register_page.dart';
 import 'package:pubg_mobile_nepal/theme/colors.dart';
