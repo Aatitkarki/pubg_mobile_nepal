@@ -35,14 +35,11 @@ class LoginPage extends StatelessWidget {
             SizedBox(
               height: size.height * 0.2,
             ),
-            Text("EMAIL ADDRESS",
-                style: Theme.of(context).textTheme.headline5.copyWith(
-                      fontSize: 20,
-                    )),
+            Text("EMAIL ADDRESS", style: Theme.of(context).textTheme.bodyText2),
             TextField(),
             Text(
               "PASSWORD",
-              style: Theme.of(context).textTheme.headline5,
+              style: Theme.of(context).textTheme.bodyText2,
             ),
             TextField(),
             mHeightSpan,
@@ -57,10 +54,7 @@ class LoginPage extends StatelessWidget {
                 child: Center(
                   child: Text(
                     "LOGIN",
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyText1
-                        .copyWith(color: kBackgroundColor),
+                    style: Theme.of(context).textTheme.subtitle1,
                   ),
                 ),
               ),
@@ -74,7 +68,7 @@ class LoginPage extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .caption
-                    .copyWith(color: kPrimaryColor, fontSize: 12),
+                    .copyWith(color: kTextWithBackgroundColor, fontSize: 12),
               ),
             ),
           ],

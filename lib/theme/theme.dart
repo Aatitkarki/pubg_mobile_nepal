@@ -8,6 +8,7 @@ ThemeData kLightTheme = ThemeData(
   textTheme: TextTheme(
       button: TextStyle(fontSize: 16, letterSpacing: 0.5),
       // h1
+
       headline5: TextStyle(
         fontSize: 26,
         fontFamily: 'BahijSultanNahia',

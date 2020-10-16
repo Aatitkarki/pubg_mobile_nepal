@@ -6,36 +6,52 @@ import 'package:pubg_mobile_nepal/theme/colors.dart';
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final height = Get.height;
+    final width = Get.width;
+    print("this is height $height");
+    print("this is width $width");
     return Scaffold(
-      backgroundColor: kSecondaryBackgroundColor,
       body: SafeArea(
         child: Column(
           children: [
-            Container(
-              width: Get.width,
-              color: kBackgroundColor,
-              padding: EdgeInsets.only(top: 20, bottom: 10),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "WELCOME TO PUBG MOBILE NEPAL",
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyText2
-                        .copyWith(color: kPrimaryTextColor),
+            Flexible(
+              child: FractionallySizedBox(
+                  heightFactor: 40,
+                  widthFactor: width,
+                  child: Container(
+                    color: Colors.green,
+                  )
+                  //             Container(
+                  //   width: Get.width,
+                  //   color: kBackgroundColor,
+                  //   padding: EdgeInsets.only(top: 20, bottom: 10),
+                  //   child: Column(
+                  //     mainAxisAlignment: MainAxisAlignment.center,
+                  //     children: [
+                  //       Text(
+                  //         "WELCOME TO PUBG MOBILE NEPAL",
+                  //         style: Theme.of(context)
+                  //             .textTheme
+                  //             .bodyText2
+                  //             .copyWith(color: kPrimaryTextColor),
+                  //       ),
+                  //       Text("Himanshu Marasini")
+                  //     ],
+                  //   ),
+                  // ),
                   ),
-                  Text("Himanshu Marasini")
-                ],
-              ),
             ),
-            sHeightSpan,
+            Container(
+              height: 8,
+              width: double.infinity,
+              color: kSecondaryBackgroundColor,
+            ),
             SingleChildScrollView(
               child: Container(
-                color: kBackgroundColor,
                 child: Column(
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [menuWithIcon(context), menuWithIcon(context)],
                     ),
                     Row(
@@ -65,6 +81,7 @@ class HomeScreen extends StatelessWidget {
 
   Widget menuWithIcon(BuildContext context) {
     return Container(
+      width: Get.width * 0.4,
       decoration: BoxDecoration(color: kLightYellowColor),
       child: Center(
           child: Column(
