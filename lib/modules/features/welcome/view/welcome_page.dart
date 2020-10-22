@@ -9,6 +9,8 @@ import 'package:pubg_mobile_nepal/theme/colors.dart';
 class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final height = Get.height;
+    final width = Get.width;
     return Scaffold(
       body: Container(
         padding: lPadding,
@@ -33,39 +35,40 @@ class WelcomePage extends StatelessWidget {
             ),
             mHeightSpan,
             sHeightSpan,
-            InkWell(
-                //TODO: Add splash to the inkwell
-                onTap: () => Get.to(RegisterPage()),
-                child: Container(
-                  width: Get.width,
-                  padding: mYPadding,
-                  decoration: BoxDecoration(
-                      color: kPrimaryColor,
-                      borderRadius: BorderRadius.circular(4)),
-                  child: Center(
-                      child: Text(
-                    "Create Account",
-                    style: Theme.of(context).textTheme.caption,
-                  )),
-                )),
+            ButtonTheme(
+              minWidth: width,
+              padding: mYPadding,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: RaisedButton(
+                color: kPrimaryColor,
+                onPressed: () => Get.to(RegisterPage()),
+                child: Text(
+                  "Create Account",
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText1
+                      .copyWith(color: kBackgroundColor),
+                ),
+              ),
+            ),
             mHeightSpan,
-            InkWell(
-              //TODO: Add spalsh to the inkwell
-              onTap: () => Get.to(LoginPage()),
-              child: Container(
-                width: Get.width,
-                padding: mYPadding,
-                decoration: BoxDecoration(
-                    color: kLightYellowColor,
-                    borderRadius: BorderRadius.circular(4)),
-                child: Center(
-                  child: Text(
-                    "Login",
-                    style: Theme.of(context)
-                        .textTheme
-                        .caption
-                        .copyWith(color: kPrimaryTextColor),
-                  ),
+            ButtonTheme(
+              minWidth: width,
+              padding: mYPadding,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: RaisedButton(
+                color: kPrimaryColor,
+                onPressed: () => Get.to(LoginPage()),
+                child: Text(
+                  "Login",
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText1
+                      .copyWith(color: kBackgroundColor),
                 ),
               ),
             ),

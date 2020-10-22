@@ -47,22 +47,21 @@ class LoginPage extends StatelessWidget {
                       )),
               TextField(),
               lHeightSpan,
-              InkWell(
-                onTap: () => Get.to(HomeScreen()),
-                child: Container(
-                  width: Get.width,
-                  padding: mYPadding,
-                  decoration: BoxDecoration(
-                      color: kPrimaryColor,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Center(
-                    child: Text(
-                      "LOGIN",
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyText1
-                          .copyWith(color: kBackgroundColor),
-                    ),
+              ButtonTheme(
+                minWidth: size.width,
+                padding: mYPadding,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: RaisedButton(
+                  color: kPrimaryColor,
+                  onPressed: () => Get.to(HomeScreen()),
+                  child: Text(
+                    "LOGIN",
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyText1
+                        .copyWith(color: kBackgroundColor),
                   ),
                 ),
               ),

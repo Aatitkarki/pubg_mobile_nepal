@@ -6,7 +6,7 @@ import 'package:pubg_mobile_nepal/theme/colors.dart';
 
 import 'dummy_data.dart';
 
-class Dashboard extends StatelessWidget {
+class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
