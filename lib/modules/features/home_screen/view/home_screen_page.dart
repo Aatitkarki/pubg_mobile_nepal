@@ -117,7 +117,11 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      elHeightSpan,
+                      mHeightSpan,
+                      Container(
+                        height: width * 0.15,
+                        color: kSecondaryBackgroundColor,
+                      ),
                     ],
                   ),
                 ),
