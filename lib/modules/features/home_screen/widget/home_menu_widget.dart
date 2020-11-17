@@ -7,10 +7,12 @@ import 'package:pubg_mobile_nepal/theme/colors.dart';
 class HomeMenu extends StatelessWidget {
   final String title;
   final String imgUrl;
+  final Function onPressed;
 
   HomeMenu({
     this.title,
     this.imgUrl,
+    this.onPressed,
   });
 
   @override
@@ -22,25 +24,32 @@ class HomeMenu extends StatelessWidget {
         color: kLightYellowColor,
         borderRadius: BorderRadius.circular(10.0),
       ),
-      child: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SvgPicture.asset(
-            imgUrl,
-            height: 30.0,
-          ),
-          eesHeightSpan,
-          esHeightSpan,
-          Text(
-            title,
-            style: Theme.of(context).textTheme.bodyText2.copyWith(
-                  color: kPrimaryTextColor,
-                  fontSize: 16.0,
-                ),
-          ),
-        ],
-      )),
+      child: Material(
+        child: InkWell(
+          onTap: () {
+            onPressed();
+          },
+          child: Center(
+              child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SvgPicture.asset(
+                imgUrl,
+                height: 30.0,
+              ),
+              eesHeightSpan,
+              esHeightSpan,
+              Text(
+                title,
+                style: Theme.of(context).textTheme.bodyText2.copyWith(
+                      color: kPrimaryTextColor,
+                      fontSize: 16.0,
+                    ),
+              ),
+            ],
+          )),
+        ),
+      ),
     );
   }
 }

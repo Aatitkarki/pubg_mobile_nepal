@@ -35,6 +35,7 @@ class DashboardPage extends StatelessWidget {
                 ),
               ],
             ),
+
             Divider(
               thickness: 7.0,
               color: Colors.grey[100],

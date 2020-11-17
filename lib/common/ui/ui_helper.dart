@@ -48,6 +48,7 @@ final sPagePadding = const EdgeInsets.all(16);
 
 // container padding
 final esPadding = const EdgeInsets.symmetric(horizontal: 4, vertical: 4);
+final esYXPadding = const EdgeInsets.symmetric(horizontal: 16, vertical: 4);
 final sPadding = const EdgeInsets.symmetric(horizontal: 8, vertical: 8);
 final esXPadding = const EdgeInsets.symmetric(horizontal: 4);
 final esYPadding = const EdgeInsets.symmetric(vertical: 4);
