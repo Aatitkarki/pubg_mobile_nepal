@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:pubg_mobile_nepal/common/ui/ui_helper.dart';
 import 'package:pubg_mobile_nepal/modules/features/dashboard/view/dashboard_page.dart';
 import 'package:pubg_mobile_nepal/modules/features/home_screen/widget/home_menu_widget.dart';
+import 'package:pubg_mobile_nepal/modules/features/match_highlights/view/match_highlight_page.dart';
 import 'package:pubg_mobile_nepal/modules/features/upcoming_match/view/upcoming_match_page.dart';
 import 'package:pubg_mobile_nepal/modules/features/user_details/view/user_details_screen.dart';
 import 'package:pubg_mobile_nepal/modules/features/welcome/view/welcome_page.dart';
@@ -83,6 +84,7 @@ class HomeScreen extends StatelessWidget {
                               imgUrl: "assets/icons/dashboard.svg",
                             ),
                             HomeMenu(
+                              onPressed: () => Get.to(MatchHighlightPage()),
                               title: "Match Highlights",
                               imgUrl: "assets/icons/multimedia-player.svg",
                             ),
@@ -103,9 +105,7 @@ class HomeScreen extends StatelessWidget {
                               imgUrl: "assets/icons/Contact Icon.svg",
                             ),
                             HomeMenu(
-                              onPressed: () {
-                                Get.to(UserDetailsPage());
-                              },
+                              onPressed: () => Get.to(UserDetailsPage()),
                               title: "Settings",
                               imgUrl: "assets/icons/setting Icon.svg",
                             ),

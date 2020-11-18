@@ -8,6 +8,7 @@ const Color kPrimaryTextColor = Color(0xff373737);
 const Color kSecondaryBackgroundColor = Color(0xfff8f8f8);
 
 const Color kSecondaryButtonColor = Color(0xffe74c3c);
+const Color kThirdButtonColor = Color(0xFF91d18b);
 
 //Used at textfield with no input
 const Color kTextWithBackgroundColor = Color(0xfffafafa);
