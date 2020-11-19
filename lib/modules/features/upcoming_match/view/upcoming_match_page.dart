@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:pubg_mobile_nepal/common/ui/ui_helper.dart';
 import 'package:pubg_mobile_nepal/modules/features/upcoming_match/widgets/upcoming_match_detail.dart';
@@ -18,25 +19,27 @@ class UpcomingMatchPage extends StatelessWidget {
               elHeightSpan,
               lHeightSpan,
               pageTitle(context),
-              Column(
-                // mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    width: size.width,
-                    color: kPrimaryTextColor,
-                    padding: sPadding,
-                    child: Text(
-                      "MATCHES OF: 19-08-2020",
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyText2
-                          .copyWith(fontSize: 18.0, color: Colors.white),
-                    ),
-                  ),
-                  UpcomingMatchDetail()
-                ],
-              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: 5,
+                  itemBuilder: (context, index) {
+                    return buildUpcomingMatch(context);
+                  },
+                ),
+              )
             ])));
+  }
+
+  Widget buildUpcomingMatch(BuildContext context) {
+    return Column(
+      // mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        UpcomingMatchDetail(),
+        sHeightSpan,
+        Icon(FontAwesomeIcons.solidCircle, size: 10),
+        esHeightSpan
+      ],
+    );
   }
 
   Widget pageTitle(BuildContext context) {

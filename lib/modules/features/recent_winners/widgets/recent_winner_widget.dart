@@ -3,14 +3,13 @@ import 'package:get/get.dart';
 import 'package:pubg_mobile_nepal/common/ui/ui_helper.dart';
 import 'package:pubg_mobile_nepal/theme/colors.dart';
 
-class UpcomingMatchDetail extends StatelessWidget {
+class RecentWinnerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      width: Get.width,
-      child: Column(
-        children: [
+        width: Get.width,
+        child: Column(children: [
           Container(
             width: size.width,
             color: kPrimaryTextColor,
@@ -26,13 +25,13 @@ class UpcomingMatchDetail extends StatelessWidget {
           lHeightSpan,
           Text("MATCH WILL START AT:"),
           Text(
-            "10:00 PM",
+            "GAME OVER",
             style: Theme.of(context)
                 .textTheme
                 .bodyText2
                 .copyWith(fontSize: 18.0, color: Colors.black),
           ),
-          lHeightSpan,
+          sHeightSpan,
           Container(
             padding: sXPagePadding,
             child: Column(
@@ -52,40 +51,44 @@ class UpcomingMatchDetail extends StatelessWidget {
                     buildMatchRow(context, "Winning Prize:", "NRS 3500")
                   ],
                 ),
+                Divider(
+                  color: kSecondayColor,
+                  height: 2,
+                )
               ],
             ),
           ),
-          lHeightSpan,
+          esHeightSpan,
+          Text(
+            "WINNING TEAM:",
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2
+                .copyWith(color: kPrimaryTextColor),
+          ),
+          Text("4 angry Gorkhali".toUpperCase()),
           Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(14)),
-            child: Material(
-              color: kSecondayColor,
-              borderRadius: BorderRadius.circular(14),
-              child: InkWell(
-                splashColor: Colors.yellow,
-                child: Padding(
-                  padding: esYXPadding,
-                  child: Text(
-                    "Register Now",
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyText2
-                        .copyWith(color: kBackgroundColor),
-                  ),
-                ),
-              ),
+            padding: lPagePadding,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                buildUserNameID(context, "4ag spider", "89794646564"),
+                buildUserNameID(context, "4ag snake", "64564564564"),
+                buildUserNameID(context, "4ag tiger", "45664545656"),
+                buildUserNameID(context, "4ag elephant", "89794646564"),
+              ],
             ),
           ),
-        ],
-      ),
-    );
+          lHeightSpan
+        ]));
   }
 
   Widget buildMatchRow(BuildContext context, String type, String data) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Text(
-          "$type",
+          "$type".toUpperCase(),
           style: Theme.of(context)
               .textTheme
               .bodyText2
@@ -97,6 +100,29 @@ class UpcomingMatchDetail extends StatelessWidget {
                 fontSize: 12.0,
                 fontWeight: FontWeight.w300))
       ],
+    );
+  }
+
+  Widget buildUserNameID(BuildContext context, String name, String id) {
+    return Padding(
+      padding: esYPadding,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "$name",
+            style: Theme.of(context).textTheme.bodyText1.copyWith(
+                color: kPrimaryTextColor,
+                fontSize: 12.0,
+                fontWeight: FontWeight.w300),
+          ),
+          Text("$id",
+              style: Theme.of(context).textTheme.bodyText1.copyWith(
+                  color: kPrimaryTextColor,
+                  fontSize: 12.0,
+                  fontWeight: FontWeight.w300))
+        ],
+      ),
     );
   }
 }

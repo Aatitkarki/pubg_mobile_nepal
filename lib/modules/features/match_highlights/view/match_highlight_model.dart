@@ -50,7 +50,8 @@ class MatchHighlightModel extends StatelessWidget {
               ),
               sHeightSpan,
               Icon(
-                FontAwesomeIcons.ellipsisH,
+                FontAwesomeIcons.solidCircle,
+                size: 10,
               ),
               sHeightSpan,
             ],
